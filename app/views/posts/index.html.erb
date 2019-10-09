@@ -1,0 +1,26 @@
+<ul class="posts-lists">
+
+
+
+        <% @posts.each do |post| %>
+
+    <li class="posts-list">
+        <h4><%= post.title %></h4>
+
+        <p><%= post.event_date %></p>
+        <p><%= post.venue%></p>
+        <p><%= post.capacity %></p>
+        <p><%= post.cost %></p>
+
+
+        <%= link_to '編集', edit_post_path(post) %> |
+        
+
+    </li>
+
+
+        <%end%>
+
+
+
+</ul>

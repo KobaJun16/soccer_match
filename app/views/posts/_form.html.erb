@@ -1,0 +1,79 @@
+<%= form_with(model: post, local: true) do |form| %>
+
+<div class="apply-create">
+
+
+
+    <div class="apply-header">
+
+        <h4>募集情報の新規作成</h4>
+
+    </div>
+
+
+    <div class="apply-forms">
+
+
+        <div class="apply-form">
+            <%= form.label :タイトル %>
+            <%= form.text_field :title, id: :post_title %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :開催日 %>
+            <%= form.datetime_select :event_date, id: :event_date %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :募集期限 %>
+            <%= form.datetime_select :application_deadline, id: :post_applicationdeadline %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :開催エリア %>
+            <%= form.select :holding_area, id: :post_holding_area %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :会場 %>
+            <%= form.text_field :venue, id: :post_venue  %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :定員 %>
+            <%= form.number_field :capacity, id: :post_capacity %>人
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :費用 %>
+            <%= form.number_field :cost, id: :post_cost %>円
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :年代 %>
+            <%= form.number_field :age, id: :post_age %>
+        </div>
+
+        <div class="apply-form">
+            <%= form.label :写真 %>
+            <%= form.file_field :picture, id: :post_picture %>
+        </div>
+
+
+
+
+
+        <div class="actions">
+            <%= form.submit %>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>
+
+<% end %>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SoccerMatch</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+
+
+<body>
+
+
+
+        <header>
+            <div class="header-logo">
+                <h4><a href="/home/top">SoccerMatch</a></h4>
+            </div>
+            <ul class="header-menu">
+                <li><a href="/posts">募集一覧</a></li>
+                <li><a href="/posts/new">募集したい</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </header>
+
+
+
+        <%= yield %>
+
+
+
+        <footer>
+            <div class="footer-logo">
+                <h4><a href="/home/top">SoccerMatch</a></h4>
+            </div>
+            <ul class="footer-menu">
+                <li><a href="#">募集一覧</a></li>
+                <li><a href="#">募集したい</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </footer>
+
+</body>
+
+</html>
